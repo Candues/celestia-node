@@ -27,47 +27,50 @@ Node türü başına sistem gereksinimleri için resmi dokümanlar sayfasına ba
 * [Bridge](https://docs.celestia.org/nodes/bridge-validator-node#hardware-requirements)
 * [Light](https://docs.celestia.org/nodes/light-node#hardware-requirements)
 * *Full coming soon*
+<p>Celestia'n&#305;n veri kullan&#305;labilirli&#287;i d&uuml;&#287;&uuml;m t&uuml;rlerinin Golang uygulamas&#305;</p>
 
-## Kurulum
+<p>Yukar&#305;da a&ccedil;&#305;klanan celestia d&uuml;&#287;&uuml;m&uuml; t&uuml;rleri celestia veri kullan&#305;labilirli&#287;i (DA) a&#287;&#305;n&#305; i&ccedil;erir.</p>
 
-```sh
-git clone https://github.com/celestiaorg/celestia-node.git 
-cd celestia-node
-make install
-```
+<p>DA a&#287;&#305;, konsens&uuml;s a&#287;&#305;ndan gelen bloklar&#305; dinleyerek ve veri kullan&#305;labilirli&#287;i &ouml;rneklemesi (DAS) i&ccedil;in sindirilebilir hale getirerek celestia &ccedil;ekirdekli konsens&uuml;s a&#287;&#305;n&#305; sarar.</p>
 
-Bir node kurma ve gereken donanım gereksinimleri hakkında daha fazla bilgi için şu adresteki dokümanlarımızı ziyaret edin: <https://docs.celestia.org>.
+<p>DAS hakk&#305;nda daha fazla bilgi edinmek ve Celestia zincir verilerine nas&#305;l g&uuml;venli ve &ouml;l&ccedil;eklenebilir eri&#351;im sa&#287;lad&#305;&#287;&#305;n&#305; &ouml;&#287;renmek istiyorsan&#305;z [buradan](https://blog.celestia.org/celestia-mvp-release-data-availability-sampling-light-clients) okumaya devam edebilirsiniz.</p>
 
-## API dokümanları
+<p>## Minimum gereksinimler</p>
 
-Celestia-node ortak API'sı belgeleri [burada](https://docs.celestia.org/developers/node-api/).
+<p>| Gereksinim | Notlar&#305; | |-------------|----------------| | Go version | 1.17 or higher |</p>
 
-## Node türleri
+<p>## Sistem Gereksinimleri</p>
 
-- **Bridge** nodes - Blokları celestia konsensüs ağından celestia veri kullanılabilirliği (DA) ağına aktarma
-- **Full** nodes - DA ağını paylaşımlar için örnekleyerek blokları tamamen yeniden oluşturun ve saklayın
-- **Light** nodes - DA ağını paylaşımlar için örnekleyerek blok verilerinin kullanılabilirliğini doğrulayın
+<p>Node t&uuml;r&uuml; ba&#351;&#305;na sistem gereksinimleri i&ccedil;in resmi dok&uuml;manlar sayfas&#305;na bak&#305;n:  * [Bridge](https://docs.celestia.org/nodes/bridge-validator-node#hardware-requirements) * [Light](https://docs.celestia.org/nodes/light-node#hardware-requirements) * *Full coming soon*</p>
 
-Daha fazla bilgi [burada](https://github.com/celestiaorg/celestia-node/blob/main/docs/adr/adr-003-march2022-testnet.md#legend).
+<p>## Kurulum</p>
 
-## Run a node
+<p>&#96;&#96;&#96;sh git clone https://github.com/celestiaorg/celestia-node.git  cd celestia-node make install &#96;&#96;&#96;</p>
 
-`<node_type>` can be `bridge`, `full` or `light`.
+<p>Bir node kurma ve gereken donan&#305;m gereksinimleri hakk&#305;nda daha fazla bilgi i&ccedil;in &#351;u adresteki dok&uuml;manlar&#305;m&#305;z&#305; ziyaret edin: <https://docs.celestia.org>.</p>
 
-```sh
-celestia <node_type> init 
-```
+<p>## API dok&uuml;manlar&#305;</p>
 
-```sh
-celestia <node_type> start
-```
+<p>Celestia-node ortak API's&#305; belgeleri [burada](https://docs.celestia.org/developers/node-api/).</p>
 
-## Pakete özgü belgeler
+<p>## Node t&uuml;rleri</p>
 
-- [Header](./service/header/doc.go)
-- [Share](./service/share/doc.go)
-- [DAS](./das/doc.go)
+<p>- **Bridge** nodes - Bloklar&#305; celestia konsens&uuml;s a&#287;&#305;ndan celestia veri kullan&#305;labilirli&#287;i (DA) a&#287;&#305;na aktarma - **Full** nodes - DA a&#287;&#305;n&#305; payla&#351;&#305;mlar i&ccedil;in &ouml;rnekleyerek bloklar&#305; tamamen yeniden olu&#351;turun ve saklay&#305;n - **Light** nodes - DA a&#287;&#305;n&#305; payla&#351;&#305;mlar i&ccedil;in &ouml;rnekleyerek blok verilerinin kullan&#305;labilirli&#287;ini do&#287;rulay&#305;n</p>
 
-## Kod kuralları
+<p>Daha fazla bilgi [burada](https://github.com/celestiaorg/celestia-node/blob/main/docs/adr/adr-003-march2022-testnet.md#legend).</p>
 
-Kod kurallarımıza bakın [burada](https://docs.celestia.org/community/coc).
+<p>## Run a node</p>
+
+<p>&#96;<node_type>&#96; can be &#96;bridge&#96;, &#96;full&#96; or &#96;light&#96;.</p>
+
+<p>&#96;&#96;&#96;sh celestia <node_type> init  &#96;&#96;&#96;</p>
+
+<p>&#96;&#96;&#96;sh celestia <node_type> start &#96;&#96;&#96;</p>
+
+<p>## Pakete &ouml;zg&uuml; belgeler</p>
+
+<p>- [Header](./service/header/doc.go) - [Share](./service/share/doc.go) - [DAS](./das/doc.go)</p>
+
+<p>## Kod kurallar&#305;</p>
+
+<p>Kod kurallar&#305;m&#305;za bak&#305;n [burada](https://docs.celestia.org/community/coc).</p>
